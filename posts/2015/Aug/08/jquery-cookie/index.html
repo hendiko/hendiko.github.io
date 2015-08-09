@@ -1,74 +1,104 @@
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8"> 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en"
+>
+<head>
+    <title>jQuery-Cookie - Beautiful Cloud</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/posts/2015/Aug/08/jquery-cookie/">
+
         <meta name="author" content="Xavier Ian" />
-        <meta name="copyright" content="Xavier Ian" />
+        <meta name="description" content="jquery-cookie 基本用法 创建 cookie： $.cookie(&#39;name&#39;, &#39;value&#39;); 创建具有有效期的 cookie： $.cookie(&#39;name&#39;, &#39;value&#39;, {expires: 7}); 创建具有有效期的 cookie，全站有效： $.cookie(&#39;name&#39;, &#39;value&#39;, {expires: 7, path: &#39;/&#39;}); 读取 cookie： $.cookie(&#39;name&#39;); 读取全部 cookie： $.cookie(); 删除 cookie： $.removeCookie(&#39;name&#39;); // Need to use the same attributes (path, domain) as what the cookie was written with $.cookie ..." />
 
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary">
+        <meta property="og:site_name" content="Beautiful Cloud" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="jQuery-Cookie"/>
+        <meta property="og:url" content="/posts/2015/Aug/08/jquery-cookie/"/>
+        <meta property="og:description" content="jquery-cookie 基本用法 创建 cookie： $.cookie(&#39;name&#39;, &#39;value&#39;); 创建具有有效期的 cookie： $.cookie(&#39;name&#39;, &#39;value&#39;, {expires: 7}); 创建具有有效期的 cookie，全站有效： $.cookie(&#39;name&#39;, &#39;value&#39;, {expires: 7, path: &#39;/&#39;}); 读取 cookie： $.cookie(&#39;name&#39;); 读取全部 cookie： $.cookie(); 删除 cookie： $.removeCookie(&#39;name&#39;); // Need to use the same attributes (path, domain) as what the cookie was written with $.cookie ..."/>
+        <meta property="article:published_time" content="2015-08-08" />
+            <meta property="article:section" content="misc" />
+            <meta property="article:author" content="Xavier Ian" />
 
-<meta name="keywords" content=", misc, " />
 
-<meta property="og:title" content="jQuery-Cookie "/>
-<meta property="og:url" content="/jquery-cookie.html" />
-<meta property="og:description" content="jquery-cookie 基本用法 创建 cookie： $.cookie(&#39;name&#39;, &#39;value&#39;); 创建具有有效期的 cookie： $.cookie(&#39;name&#39;, &#39;value&#39;, {expires: 7}); 创建具有有效期的 cookie，全站有效： $.cookie(&#39;name&#39;, &#39;value&#39;, {expires: 7, path: &#39;/&#39;}); 读取 cookie： $.cookie(&#39;name&#39;); 读取全部 cookie： $.cookie(); 删除 cookie： $.removeCookie(&#39;name&#39;); // Need to use the same attributes (path, domain) as what the cookie was written with $.cookie ..." />
-<meta property="og:site_name" content="Wonder Era" />
-<meta property="og:article:author" content="Xavier Ian" />
-<meta property="og:article:published_time" content="2015-08-08T21:50:00+08:00" />
-<meta name="twitter:title" content="jQuery-Cookie ">
-<meta name="twitter:description" content="jquery-cookie 基本用法 创建 cookie： $.cookie(&#39;name&#39;, &#39;value&#39;); 创建具有有效期的 cookie： $.cookie(&#39;name&#39;, &#39;value&#39;, {expires: 7}); 创建具有有效期的 cookie，全站有效： $.cookie(&#39;name&#39;, &#39;value&#39;, {expires: 7, path: &#39;/&#39;}); 读取 cookie： $.cookie(&#39;name&#39;); 读取全部 cookie： $.cookie(); 删除 cookie： $.removeCookie(&#39;name&#39;); // Need to use the same attributes (path, domain) as what the cookie was written with $.cookie ...">
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-        <title>jQuery-Cookie  · Wonder Era
-</title>
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
-    </head>
-    <body>
-        <div id="content-sans-footer">
-        <div class="navbar navbar-static-top">
-            <div class="navbar-inner">
-                <div class="container-fluid">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="/"><span class=site-name>Wonder Era</span></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav pull-right top-menu">
-                            <li ><a href="">Home</a></li>
-                            <li ><a href="/categories.html">Categories</a></li>
-                            <li ><a href="/tags.html">Tags</a></li>
-                            <li ><a href="/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Beautiful Cloud            </a>
         </div>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span1"></div>
-                <div class="span10">
-<article>
-<div class="row-fluid">
-    <header class="page-header span10 offset2">
-    <h1><a href="/jquery-cookie.html"> jQuery-Cookie  </a></h1>
-    </header>
-</div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/develop.html">Develop</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/misc.html">Misc</a>
+                        </li>
+                        <li >
+                            <a href="/category/review.html">Review</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
 
-<div class="row-fluid">
-        <div class="span8 offset2 article-content">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/posts/2015/Aug/08/jquery-cookie/"
+                       rel="bookmark"
+                       title="Permalink to jQuery-Cookie">
+                        jQuery-Cookie
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-08-08T21:50:00+08:00"> Sat 08 August 2015</time>
+    </span>
 
-            
-            <h2><a href="https://github.com/carhartl/jquery-cookie">jquery-cookie</a></h2>
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h2><a href="https://github.com/carhartl/jquery-cookie">jquery-cookie</a></h2>
 <h3>基本用法</h3>
 <p>创建 cookie：</p>
 <div class="highlight"><pre>$.cookie(&#39;name&#39;, &#39;value&#39;);
@@ -186,48 +216,75 @@ $.cookie(&#39;foo&#39;, Number);  // return 42
     <span class="k">return</span> <span class="nx">value</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/\+/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
 <span class="p">}).</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>
 </pre></div>
-            
-            
-            <hr/>
-        </div>
-        <section>
-        <div class="span2" style="float:right;font-size:0.9em;">
-            <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-08-08T21:50:00+08:00">Aug 8, 2015</time>
-            <h4>Category</h4>
-            <a class="category-link" href="/categories.html#misc-ref">misc</a>
-<h4>Contact</h4>
-    <a href="#" title="My You can add links in your config file Profile" class="sidebar-social-links" target="_blank">
-    <i class="fa fa-you can add links in your config file sidebar-social-links"></i></a>
-    <a href="#" title="My Another social link Profile" class="sidebar-social-links" target="_blank">
-    <i class="fa fa-another social link sidebar-social-links"></i></a>
-        </div>
-        </section>
-</div>
-</article>
-                </div>
-                <div class="span1"></div>
             </div>
-        </div>
-        <div id="push"></div>
-    </div>
-<footer>
-<div id="footer">
-    <ul class="footer-content">
-        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
-    </ul>
-</div>
-</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-        <script>
-            function validateForm(query)
-            {
-                return (query.length > 0);
-            }
-        </script>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
-    
-    </body>
-    <!-- Theme: Elegant built for Pelican
-    License : http://oncrashreboot.com/pelican-elegant -->
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="#"><i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg"></i> You can add links in your config file</a></li>
+                <li class="list-group-item"><a href="#"><i class="fa fa-another-social-link-square fa-lg"></i> Another social link</a></li>
+              </ul>
+            </li>
+
+
+
+            <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group " id="tags">
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python.org
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jinja.pocoo.org/" target="_blank">
+                Jinja2
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 Xavier Ian
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+</body>
 </html>
