@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Developer - Beautiful Cloud</title>
+    <title>NodeJs - Beautiful Cloud</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
 
 
     <meta name="author" content="Xavier Ian" />
-    <meta name="keywords" content="Developer" />
+    <meta name="keywords" content="NodeJs" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="Beautiful Cloud" />
@@ -49,10 +49,10 @@ Beautiful Cloud            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li >
                             <a href="http://hendiko.github.io/category/developer.html">Developer</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="http://hendiko.github.io/category/nodejs.html">Nodejs</a>
                         </li>
             </ul>
@@ -69,23 +69,9 @@ Beautiful Cloud            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a href="http://hendiko.github.io/blogs/2015/Aug/10/you-xu-ajax-qing-qiu/">有序 Ajax 请求</a></h2>
-                <div class="summary"><h2>情景一：以客户端最后一次请求为准</h2>
-<p>客户端发起 N 次异步请求，客户端发出的第 N 次请求得到响应时触发事件。</p>
-<h3>实现一：使用自定义计数器</h3>
-<p>设置 ajax 请求计数器，每发出一次 ajax 请求时，计数器加一，并且将计数作为 context 属性传递给 ajax，即设置 ajax 的 context 为 <code>{order: count}</code>，然后每次 ajax 请求结束时，检查 <code>this.order</code> 是否等于当前计数，是的话表示本次请求就是最后一次请求，然后触发事件。（计数器清零与否不影响本实现）</p>
-<h2>情景二：以服务器最后一次响应为准</h2>
-<p>客户端发起 N 次 ajax 请求，等待所有请求结束时才触发事件。</p>
-<h3>实现一：使用自定义计数器</h3>
-<p>设置 ajax ...</p>
-<p><small><a href="http://hendiko.github.io/blogs/2015/Aug/10/you-xu-ajax-qing-qiu/#disqus_thread" >View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="http://hendiko.github.io/blogs/2015/Aug/10/you-xu-ajax-qing-qiu/">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://hendiko.github.io/blogs/2015/Aug/08/jquery-cookie/">jQuery-Cookie</a></h2>
-                <div class="summary"><p>jquery-cookie</p>
-<p><small><a href="http://hendiko.github.io/blogs/2015/Aug/08/jquery-cookie/#disqus_thread" >View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="http://hendiko.github.io/blogs/2015/Aug/08/jquery-cookie/">more ...</a>
+                <h2><a href="http://hendiko.github.io/blogs/2015/Aug/11/nodejs-mo-ban-yin-qing-zhi-ectjs/">NodeJs 模板引擎之 ECTJs</a></h2>
+                <div class="summary"><p>最快的模板引擎。</p>
+<p><small><a href="http://hendiko.github.io/blogs/2015/Aug/11/nodejs-mo-ban-yin-qing-zhi-ectjs/#disqus_thread" >View comments</a>.</small></p>                    <a class="btn btn-default btn-xs" href="http://hendiko.github.io/blogs/2015/Aug/11/nodejs-mo-ban-yin-qing-zhi-ectjs/">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -106,13 +92,8 @@ Beautiful Cloud            </a>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://hendiko.github.io/blogs/2015/Aug/10/you-xu-ajax-qing-qiu/">
-                            有序 Ajax 请求
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://hendiko.github.io/blogs/2015/Aug/08/jquery-cookie/">
-                            jQuery-Cookie
+                        <a href="http://hendiko.github.io/blogs/2015/Aug/11/nodejs-mo-ban-yin-qing-zhi-ectjs/">
+                            NodeJs 模板引擎之 ECTJs
                         </a>
                     </li>
                 </ul>
